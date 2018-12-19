@@ -1,0 +1,28 @@
+<html>
+<h2>UPDATE DATA ACCOUNT</h2>
+
+<body>
+    <table>
+      <tr>
+        <td>Open Date</td>
+        <td>:</td>
+        <td><input type="datetime" [(ngModel)]="account.openDate"></td>
+      </tr>
+      <tr>
+        <td>Balance</td>
+        <td>:</td>
+        <td><input type="text" [(ngModel)]="account.balance"></td>
+      </tr>
+      <tr>
+        <td>Customer ID</td>
+        <td>:</td>
+        <td><input type="text" [(ngModel)]="account.customer"></td>
+      </tr>
+    </table>
+
+<button type="button" (click) = "cancelChanges()">Cancel</button>
+<button type="button" (click) = "submitData()">Submit</button>
+<button type="button" (click) = "addData()">Add</button>
+
+</body>
+</html>

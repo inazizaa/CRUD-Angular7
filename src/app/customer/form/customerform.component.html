@@ -1,0 +1,50 @@
+<html>
+
+<h2>UPDATE DATA CUSTOMER</h2>
+
+<body>
+  <form [formGroup]="customerFormGroup">
+    <table>
+      <tr>
+        <td>First Name</td>
+        <td>:</td>
+        <td><input type="text" formControlName="firstName"></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>:</td>
+        <td><input type="text" formControlName="lastName"></td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td>:</td>
+        <td><input type="date" formControlName="birthDate"></td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td>:</td>
+        <td><input type="text" formControlName="username"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>:</td>
+        <td><input type="text" formControlName="password"></td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td>:</td>
+        <td><input type="text" formControlName="phoneNumber"></td>
+      </tr>
+      <tr>
+        <td>Phone Type</td>
+        <td>:</td>
+        <td><input type="text" formControlName="phoneType"></td>
+      </tr>
+    </table>
+  </form>
+<button type="button" (click) = "cancelChanges()">Cancel</button>
+<button type="button" (click) = "submitData()" [disabled]="!customerFormGroup.valid">Submit</button>
+<button type="button" (click) = "addData()">Add</button>
+
+</body>
+</html>
